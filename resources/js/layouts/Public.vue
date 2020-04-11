@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="w-100">
+    <public-header />
     <slot></slot>
   </div>
 </template>

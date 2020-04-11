@@ -1,13 +1,18 @@
 <template>
   <div>
     <public-layout>
-      Huetismo
+      
     </public-layout>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'PublicIndex'
+export default {
+  name: 'PublicIndex',
+  props: {
+    pageProps: {
+      type: String
+    }
   }
+}
 </script>
