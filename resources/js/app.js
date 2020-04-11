@@ -1,8 +1,10 @@
 import './bootstrap'
 import Vue from 'vue'
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('public-layout', require('./layouts/Public.vue').default);
 
-const app = new Vue({
+Vue.component('public-index', () => import(/* webpackChunkName: "PublicIndex" */ './pages/Public/Index.vue'))
+
+new Vue({
     el: '#app',
 });

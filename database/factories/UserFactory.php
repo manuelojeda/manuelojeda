@@ -1,5 +1,5 @@
 <?php
-
+// phpcs:disable
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\User;
