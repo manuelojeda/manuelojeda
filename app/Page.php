@@ -22,7 +22,7 @@ class Page extends Model
         'content' => 'json'
     ];
 
-    public function getSlugOptions()
+    public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
             ->generateSlugsFrom('title')

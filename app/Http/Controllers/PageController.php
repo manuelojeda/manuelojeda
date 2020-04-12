@@ -19,7 +19,7 @@ class PageController extends Controller
 
     public function indexHome()
     {
-        $page = Page::select('content')->where('title', 'Home')->first();
+        $page = Page::select('content')->where('slug', 'home')->first();
         return view('welcome')
             ->with('page', $page);
     }

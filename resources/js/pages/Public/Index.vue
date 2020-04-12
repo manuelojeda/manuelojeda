@@ -13,6 +13,14 @@ export default {
     pageProps: {
       type: String
     }
+  },
+  data() {
+    return {
+      page: null
+    }
+  },
+  created () {
+    this.page = JSON.parse(this.pageProps)
   }
 }
 </script>
