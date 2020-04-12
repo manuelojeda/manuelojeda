@@ -22,7 +22,7 @@ class PageSeeder extends Seeder
                     'name' => 'Manuel Ojeda',
                     'job' => 'Full Stack Dev',
                     'mail' => 'manuelojedasistemas@gmail.com',
-                    'image' => 'https://manuelojeda.xyz/img/profile_pic.jpg'
+                    'image' => '/img/profile-pic.png'
                 ],
                 'stack' => [
                     [
