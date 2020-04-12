@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+    'platzi_username' => env('PLATZI_USERNAME'),
 
     /*
     |--------------------------------------------------------------------------

@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PageController@indexHome');
+Route::get('/education', 'PageController@education');

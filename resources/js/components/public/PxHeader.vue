@@ -25,6 +25,9 @@
           <a href="/portfolio" class="mr-3 md:text-lg text-teal-600 hover:font-medium block md:inline my-2 md:mb-0">
             Portfolio
           </a>
+          <a href="/education" class="mr-3 md:text-lg text-teal-600 hover:font-medium block md:inline my-2 md:mb-0">
+            Education
+          </a>
           <a href="/blog" class="mr-3 md:text-lg text-teal-600 hover:font-medium block md:inline my-2 md:mb-0">
             Blog
           </a>
@@ -42,7 +45,7 @@ export default {
   name: 'PxHeader',
   created () {
     window.addEventListener('click', function (e) {
-      if (!document.getElementById('header-menu').contains(e.target)){
+      if (!document.getElementById('header-menu').contains(e.target)) {
         const menu = document.getElementById('public-header-menu')
         if (
           !menu.classList.contains('hidden') &&

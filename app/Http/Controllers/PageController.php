@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Page;
+use App\Career;
+use App\Course;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -88,5 +90,17 @@ class PageController extends Controller
     public function destroy(Page $page)
     {
         //
+    }
+
+    public function education ()
+    {
+        $response = collect([
+            'careers' => collect(Career::get()->toArray()),
+            'courses' => collect(Course::get()->toArray())
+        ]);
+
+
+        return view('education')
+            ->with('education', $response);
     }
 }
