@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import Vue from 'vue'
+// import './plugins/ApexCharts'
 import './plugins/CompositionApi'
 import './plugins/Typography'
 

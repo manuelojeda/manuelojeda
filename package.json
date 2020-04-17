@@ -42,9 +42,11 @@
     },
     "dependencies": {
         "autoprefixer": "^9.7.6",
+        "chart.js": "^2.9.3",
         "postcss": "^7.0.27",
         "tailwindcss": "^1.2.0",
-        "typography": "^0.16.19"
+        "typography": "^0.16.19",
+        "vue-chartjs": "^3.5.0"
     },
     "resolutions": {
         "minimist": "^1.2.5"

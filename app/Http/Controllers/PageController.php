@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Page;
+use App\Skill;
 use App\Career;
 use App\Course;
 use Illuminate\Http\Request;
@@ -22,8 +23,11 @@ class PageController extends Controller
     public function indexHome()
     {
         $page = Page::select('content')->where('slug', 'home')->first();
+        $skills = Skill::select('name', 'amount')->get();
+
         return view('welcome')
-            ->with('page', $page);
+            ->with('page', $page)
+            ->with('skills', $skills);
     }
 
     /**

@@ -2,6 +2,7 @@
     title="Manuel Ojeda Portfolio's"
 >
     <public-index
-        page-props="{{$page}}"
+        :page="{{$page}}"
+        :skills="{{$skills}}"
     ></public-index>
 </x-layout>
