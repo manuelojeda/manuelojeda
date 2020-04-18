@@ -13946,6 +13946,17 @@ video {
   transition-duration: 1000ms;
 }
 
+.sticky-header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+}
+
+.mt-8 {
+  margin-top: 5.5rem;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

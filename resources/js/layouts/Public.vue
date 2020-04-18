@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'PublicLayout'
-  }
+export default {
+  name: 'PublicLayout'
+}
 </script>

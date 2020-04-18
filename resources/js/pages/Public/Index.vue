@@ -3,12 +3,12 @@
     <public-layout>
       <div class="container mx-auto my-6">
         <presentation
-          class="mb-5"
+          class="mb-5 mt-8"
           :personal="page.content.personal"
         />
 
-        <div class="mission text-center lg:text-left px-2">
-          <h2 class="font-bold text-2xl">
+        <div class="mission text-center lg:text-left px-2 my-6 d-block mt-8">
+          <h2 class="font-bold text-2xl mb-2">
             My mission is
           </h2>
           <blockquote :cite="page.content.personal.name">
@@ -20,7 +20,7 @@
           </blockquote>
         </div>
 
-        <div class="skills text-center my-5">
+        <div class="skills text-center my-5 mt-8">
           <h2 class="font-bold text-2xl">
             My skills
           </h2>
@@ -53,7 +53,6 @@ import Presentation from '@/components/public/HomePage/Presentation.vue'
 import HorizontalBar from '@/charts/HorizontalBar.vue'
 // eslint-disable-next-line no-unused-vars
 import { DataCollection } from '@/interface/DataCollection'
-// import Presentation from '../../components/public/HomePage/Presentation.vue'
 
 export default defineComponent({
   name: 'PublicIndex',

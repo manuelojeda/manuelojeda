@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Skill::class, function (Faker $faker) {
     return [
         'name' => $faker->unique()->name,
-        'amount' => $faker->numberBetween(50, 100),
+        'amount' => $faker->numberBetween(75, 100),
         'order' => null
     ];
 });
