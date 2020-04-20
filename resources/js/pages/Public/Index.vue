@@ -7,40 +7,19 @@
           :personal="page.content.personal"
         />
 
-        <div class="mission text-center lg:text-left px-2 my-6 d-block mt-8">
-          <h2 class="font-bold text-2xl mb-2">
-            My mission is
-          </h2>
-          <blockquote :cite="page.content.personal.name">
-            <p>
-              {{
-                page.content.mission
-              }}
-            </p>
-          </blockquote>
-        </div>
+        <mission :mission="page.content.mission" :name="page.content.personal.name" />
 
-        <div class="skills text-center my-5 mt-8">
-          <h2 class="font-bold text-2xl">
-            My skills
-          </h2>
+        <skills :skills="skills" />
 
-          <div class="hidden lg:block">
-            <horizontal-bar
-              :chart-data="collection"
-              :options="options"
-              :width="800"
-              :height="450"
-            />
-          </div>
-          <div class="lg:hidden">
-            <horizontal-bar
-              :chart-data="collection"
-              :options="options"
-              :width="800"
-              :height="650"
-            />
-          </div>
+        <stack :stack="page.content.stack" />
+
+        <div class="float-right mb-5 my-6">
+          <a href="/portfolio" class="text-teal-500 font-medium text-xl">
+            Portfolio
+            <span>
+              <font-awesome-icon icon="caret-right" />
+            </span>
+          </a>
         </div>
       </div>
     </public-layout>
@@ -48,60 +27,28 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/composition-api'
-import Presentation from '@/components/public/HomePage/Presentation.vue'
-import HorizontalBar from '@/charts/HorizontalBar.vue'
-// eslint-disable-next-line no-unused-vars
-import { DataCollection } from '@/interface/DataCollection'
+import { defineComponent } from '@vue/composition-api';
+import Presentation from '@/components/public/Index/Presentation.vue';
+import Mission from '@/components/public/Index/Mission.vue';
+import Skills from '@/components/public/Index/Skills.vue';
+import Stack from '@/components/public/Index/Stack.vue';
 
 export default defineComponent({
   name: 'PublicIndex',
   props: {
     page: {
-      type: Object
+      type: Object,
     },
     skills: {
       type: Array as () => Array<any>,
-      default: []
-    }
+      default: [],
+    },
   },
   components: {
     Presentation,
-    HorizontalBar
+    Mission,
+    Skills,
+    Stack,
   },
-  setup (props) {
-    const collection = ref<DataCollection>({
-      labels: [],
-      datasets: []
-    })
-
-    const options = {
-      legend: { display: false },
-      responsive: true,
-      mantainAspectRatio: false
-    }
-
-    function initChart () {
-      collection.value.datasets.push({
-        label: 'Data One',
-        backgroundColor: '#3182ce',
-        barThickness: 30,
-        barPercentage: 0.5,
-        data: []
-      })
-
-      props.skills.map(skill => {
-        collection.value.labels.push(skill.name)
-        collection.value.datasets[0].data.push(skill.amount)
-      })
-    }
-
-    initChart()
-
-    return {
-      collection,
-      options
-    }
-  }
-})
+});
 </script>

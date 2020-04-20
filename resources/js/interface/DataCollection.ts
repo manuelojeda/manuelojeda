@@ -1,5 +1,5 @@
 interface DataSet {
-  label: string,
+  label?: string,
   backgroundColor: string,
   barPercentage?: number;
   barThickness?: number;

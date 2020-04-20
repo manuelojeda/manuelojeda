@@ -13,9 +13,9 @@
         </button>
       </div>
       <div class="flex items-center flex-shrink-0 mr-6 md:float-left">
-        <h1 class="text-2xl font-medium text-white">
+        <a href="/" class="text-2xl font-medium text-white">
           Manuel Ojeda
-        </h1>
+        </a>
       </div>
       <div id="public-header-menu" class="w-full flex-grow md:flex md:items-center md:w-auto hidden md:block">
         <div class="text-sm md:flex-auto">

@@ -9,23 +9,23 @@
 </template>
 
 <script>
-import Cert from './Cert.vue'
+import Cert from './Cert.vue';
 
 export default {
   name: 'Certs',
   props: {
     certs: {
-      type: Array
+      type: Array,
     },
     isCareer: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   components: {
-    Cert
-  }
-}
+    Cert,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

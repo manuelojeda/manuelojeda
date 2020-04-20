@@ -27,23 +27,27 @@ class PageSeeder extends Seeder
                 'stack' => [
                     [
                         'lang' => 'PHP',
-                        'logo' => 'fa-php',
-                        'description' => $faker->sentence
+                        'logo' => 'php',
+                        'description' => $faker->sentence,
+                        'color' => '#4f5b93',
                     ],
                     [
                         'lang' => 'Laravel',
-                        'logo' => 'fa-laravel',
-                        'description' => $faker->sentence
+                        'logo' => 'laravel',
+                        'description' => $faker->sentence,
+                        'color' => '#F05340',
                     ],
                     [
-                        'lang' => 'TypeScript',
-                        'logo' => 'fa-typescript',
-                        'description' => $faker->sentence
+                        'lang' => 'JavaScript',
+                        'logo' => 'js',
+                        'description' => $faker->sentence,
+                        'color' => '#F0DB4F',
                     ],
                     [
                         'lang' => 'Vue',
-                        'logo' => 'fa-vue',
-                        'description' => $faker->sentence
+                        'logo' => 'vuejs',
+                        'description' => $faker->sentence,
+                        'color' => '#42B883',
                     ],
                 ],
                 'mission' => $faker->text,

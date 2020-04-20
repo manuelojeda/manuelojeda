@@ -17,22 +17,22 @@ export default {
   name: 'Cert',
   props: {
     cert: {
-      type: Object
+      type: Object,
     },
     isCareer: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
-    diplomaLink () {
-      return `https://platzi.com${this.cert.diploma_link}`
+    diplomaLink() {
+      return `https://platzi.com${this.cert.diploma_link}`;
     },
-    certClasses () {
-      return 'cert p-3 border-2 border-black rounded bg-gray-300 hover:shadow-xl transition duration-300'
-    }
-  }
-}
+    certClasses() {
+      return 'cert p-3 border-2 border-black rounded bg-gray-300 hover:shadow-xl transition duration-300';
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

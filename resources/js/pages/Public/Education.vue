@@ -21,26 +21,26 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
-import Certs from '@/components/public/Education/Certs.vue'
+import { defineComponent } from '@vue/composition-api';
+import Certs from '@/components/public/Education/Certs.vue';
 
 export default defineComponent({
   name: 'Education',
   props: {
     educationProps: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   components: {
-    Certs
+    Certs,
   },
-  setup (props) {
-    const education = JSON.parse(props.educationProps)
+  setup(props) {
+    const education = JSON.parse(props.educationProps);
 
     return {
-      education
-    }
-  }
-})
+      education,
+    };
+  },
+});
 </script>
