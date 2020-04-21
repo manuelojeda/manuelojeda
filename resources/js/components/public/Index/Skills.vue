@@ -1,6 +1,6 @@
 <template>
   <div class="skills text-center my-5 mt-8">
-    <h2 class="font-bold text-3xl">
+    <h2 class="font-medium text-4xl">
       My skills
     </h2>
 

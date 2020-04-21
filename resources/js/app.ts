@@ -13,6 +13,7 @@ Vue.component('public-layout', PublicLayout);
 Vue.component('public-header', PublicHeader);
 
 Vue.component('public-index', () => import(/* webpackChunkName: "PublicIndex" */ './pages/Public/Index.vue'));
+Vue.component('portfolio', () => import(/* webpackChunkName: "Portfolio" */ './pages/Public/Portfolio.vue'));
 Vue.component('education', () => import(/* webpackChunkName: "Education" */ './pages/Public/Education.vue'));
 
 const app = new Vue({

@@ -13,9 +13,9 @@
 
         <stack :stack="page.content.stack" />
 
-        <div class="float-right mb-5 my-6">
+        <div class="float-right mr-5 my-6">
           <a href="/portfolio" class="text-teal-500 font-medium text-xl">
-            Portfolio
+            Check my Portfolio
             <span>
               <font-awesome-icon icon="caret-right" />
             </span>

@@ -1,10 +1,10 @@
 <template>
   <div class="mission text-center px-2 my-6 d-block mt-8">
-    <h2 class="font-bold text-3xl mb-2">
+    <h2 class="font-medium text-4xl mb-2">
       My mission is
     </h2>
     <blockquote :cite="name">
-      <p>
+      <p class="text-lg">
         {{
           mission
         }}

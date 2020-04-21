@@ -1,10 +1,10 @@
 <template>
   <div class="stack text-center my-5 mt-8 px-5">
-    <h2 class="font-bold text-3xl mb-5">
+    <h2 class="font-medium text-4xl mb-6">
       My stack
     </h2>
 
-    <div class="stack-grid">
+    <div class="stack-grid mt-3">
       <div
         class="stack-item"
         v-for="(stackItem, index) in stack"
