@@ -4,5 +4,6 @@
     <public-index
         :page="{{$page}}"
         :skills="{{$skills}}"
+        active-page="home"
     ></public-index>
 </x-layout>

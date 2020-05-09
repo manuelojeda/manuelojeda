@@ -1,13 +1,13 @@
 <template>
   <div>
-    <public-layout>
+    <admin-layout>
       Huetismo
-    </public-layout>
+    </admin-layout>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'PublicIndex'
-  }
+export default {
+  name: 'PublicIndex',
+};
 </script>

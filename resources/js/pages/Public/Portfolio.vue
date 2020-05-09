@@ -1,6 +1,6 @@
 <template>
   <div>
-    <public-layout>
+    <public-layout :active-page="activePage">
       <div class="container mx-auto my-6">
         <h2 class="text-3xl font-medium">
           {{page.title}}
@@ -24,6 +24,7 @@ export default defineComponent({
       type: Array,
       required: true,
     },
+    activePage: String as () => string,
   },
 });
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-6">
-    <public-layout>
+  <div class="mb-5">
+    <public-layout :active-page="activePage">
       <div class="container mx-auto px-3 lg:px-0">
         <h2 class="text-2xl font-bold mb-4">
           Careers ({{education.careers.length}})
@@ -31,6 +31,7 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    activePage: String as () => string,
   },
   components: {
     Certs,

@@ -1,135 +1,104 @@
 <template>
-  <div
-    class="bg-white w-100 flex items-center
-      justify-between flex-wrap p-6 border-b-2
-      border-teal-600 md:border-none
-      "
-    id="header-menu"
-    >
-    <div class="container mx-auto">
-      <div class="block md:hidden">
-        <button
-          class="flex items-center px-3 py-2 border-2
-            rounded text-teal-600 border-white border-teal-500
-            hover:text-white hover:border-white
-            hover:bg-teal-600 float-right transition duration-300"
-          @click="showMenu()"
-        >
-          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-          </svg>
-        </button>
-      </div>
-      <div class="flex items-center flex-shrink-0 mr-6 md:float-left">
-        <a href="/" class="text-2xl font-medium text-teal-600">
-          Manuel Ojeda
-        </a>
-      </div>
-      <div
-        id="public-header-menu"
-        class="w-full flex-grow md:flex md:items-center
-          md:w-auto hidden md:block transform duration-300"
-      >
-        <div class="text-sm md:flex-auto">
-          <div class="md:float-right mt-4 md:mt-0">
-            <a
-              href="/"
-              class="p-3 md:text-lg font-medium
-                text-teal-600 block md:inline
-                mb-2 md:mb-0
-                hover:bg-teal-600 hover:text-white
-                transition duration-300
-              "
-            >
+  <div>
+    <div class="px-header">
+      <div class="px-header--desktop d-none d-lg-block">
+        <div class="container pb-4">
+          <div class="float-left px-header--desktop--social-media">
+            Huetismo
+          </div>
+          <div class="px-header-header--desktop--links">
+            <a href="/" class="px-header-header--desktop--link">
               Home
             </a>
-            <a
-              href="/portfolio"
-              class="p-3 md:text-lg font-medium
-                text-teal-600 block md:inline
-                mb-2 md:mb-0
-                hover:bg-teal-600 hover:text-white
-                transition duration-300
-              "
-            >
+            <a href="/portfolio" class="px-header-header--desktop--link">
               Portfolio
             </a>
-            <a
-              href="/education"
-              class="p-3 md:text-lg font-medium
-                text-teal-600 block md:inline
-                mb-2 md:mb-0
-                hover:bg-teal-600 hover:text-white
-                transition duration-300
-              "
-            >
+            <a href="/education" class="px-header-header--desktop--link">
               Education
             </a>
-            <a
-              href="/blog"
-              class="p-3 md:text-lg font-medium
-                text-teal-600 block md:inline
-                mb-2 md:mb-0
-                hover:bg-teal-600 hover:text-white
-                transition duration-300
-              "
-            >
+            <a href="/blog" class="px-header-header--desktop--link">
               Blog
             </a>
-            <a
-              href="#"
-              class="p-3 md:text-lg font-medium
-                text-teal-600 block md:inline
-                mb-2 md:mb-0
-                hover:bg-teal-600 hover:text-white
-                transition duration-300
-              "
-            >
-              Resume
-            </a>
           </div>
+        </div>
+      </div>
+      <div class="px-header--mobile d-lg-none">
+        <div class="px-header--mobile--grid">
+          <a href="/" class="px-header--mobile--link" :class="{ 'active': activePage === 'home' }">
+            <b-icon icon="house" font-scale="2" />
+          </a>
+          <a href="/portfolio" class="px-header--mobile--link" :class="{ 'active': activePage === 'portfolio' }">
+            <b-icon icon="folder" font-scale="2" />
+          </a>
+          <a href="/education" class="px-header--mobile--link" :class="{ 'active': activePage === 'education' }">
+            <b-icon icon="book" font-scale="2" />
+          </a>
+          <a href="/blog" class="px-header--mobile--link">
+            <b-icon icon="archive" font-scale="2" />
+          </a>
+          <a href="#" class="px-header--mobile--link">
+            <b-icon icon="newspaper" font-scale="2" />
+          </a>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import headerObserver from '@/composables/headerObserver';
-
-export default Vue.extend({
+<script>
+export default {
   name: 'PxHeader',
-  created() {
-    window.addEventListener('click', (e: any) => {
-      if (!document.getElementById('header-menu').contains(e.target)) {
-        const menu = document.getElementById('public-header-menu');
-        if (
-          !menu.classList.contains('hidden')
-          && menu.classList.contains('menu:open')
-        ) {
-          menu.classList.add('hidden');
-          menu.classList.remove('menu:open');
+  props: {
+    activePage: String,
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.px-header {
+  .px-header--desktop {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    .px-header-header--desktop--links {
+      float: right;
+
+      .px-header-header--desktop--link {
+        margin-left: .5rem;
+        margin-right: .5rem;
+
+        &:hover {
+          text-decoration: none;
         }
       }
-    });
+    }
+  }
 
-    window.addEventListener('load', () => {
-      headerObserver(document.getElementById('header-menu'));
-    });
-  },
-  methods: {
-    showMenu() {
-      const menu = document.getElementById('public-header-menu');
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        menu.classList.add('menu:open');
-      } else {
-        menu.classList.add('hidden');
-        menu.classList.remove('menu:open');
+  .px-header--mobile {
+    background-color: #fff;
+    position: fixed;
+    display: block;
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+    z-index: 999;
+    border-top: 1px solid #007bff;
+
+    .px-header--mobile--grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(5, 1fr);
+
+      .px-header--mobile--link {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
       }
-    },
-  },
-});
-</script>
+
+      .px-header--mobile--link.active {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
+</style>

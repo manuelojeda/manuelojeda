@@ -1,12 +1,12 @@
 <template>
-  <div class="stack text-center my-5 mt-8 px-5">
-    <h2 class="font-medium text-4xl mb-6">
+  <div class="stack text-center mt-5 px-5">
+    <h2 class="stack--title">
       My stack
     </h2>
 
-    <div class="stack-grid mt-3">
+    <div class="stack--grid mt-3">
       <div
-        class="stack-item"
+        class="stack--item"
         v-for="(stackItem, index) in stack"
         :key="index"
       >
@@ -41,16 +41,24 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.stack-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+.stack {
+  margin-bottom: 5rem;
 
-  @media(min-width: 576px) {
-    grid-template-columns: 1fr 1fr;
+  .stack--title {
+    color: #4094d0;
+    font-weight: 500;
   }
-  @media(min-width: 768px) {
-    grid-template-columns: repeat(4, 1fr);
+  .stack--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    @media(min-width: 576px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media(min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 </style>

@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@indexHome');
 Route::get('/{slug}', 'PageController@getPage');
+
+Route::get('/admin/dashboard', 'Admin\DashboardController@index');
+Route::post('/admin/updateEducation', 'Admin\DashboardController@updateEducation');

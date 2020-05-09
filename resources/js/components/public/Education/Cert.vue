@@ -45,10 +45,23 @@ export default {
   max-width: 350px;
   margin: 0 auto;
   margin-bottom: 1rem;
+  border: 2px solid #c4c4c8;
+  background-color: #e7e7e0;
 
   img {
     max-width: 80px;
     margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: darken(#c4c4c8, 30%);
+    font-weight: 600;
+    font-size: .75rem;
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 }
 </style>

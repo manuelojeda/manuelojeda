@@ -1,19 +1,19 @@
 <template>
   <div class="skills text-center my-5 mt-8">
-    <h2 class="font-medium text-4xl">
+    <h2 class="skills--title">
       My skills
     </h2>
 
-    <div class="hidden lg:block">
+    <div>
       <horizontal-bar
+        class="d-lg-block d-none"
         :chart-data="collection"
         :options="options"
         :width="1200"
-        :height="450"
+        :height="650"
       />
-    </div>
-    <div class="lg:hidden">
       <horizontal-bar
+        class="d-lg-none"
         :chart-data="collection"
         :options="options"
         :width="800"
@@ -87,3 +87,12 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.skills {
+  .skills--title {
+    color: #4094d0;
+    font-weight: 500;
+  }
+}
+</style>

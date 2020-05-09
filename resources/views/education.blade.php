@@ -3,5 +3,6 @@
 >
   <education
     education-props="{{$education}}"
+    active-page="education"
   />
 </x-layout>

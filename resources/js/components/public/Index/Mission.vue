@@ -1,6 +1,6 @@
 <template>
-  <div class="mission text-center px-2 my-6 d-block mt-8">
-    <h2 class="font-medium text-4xl mb-2">
+  <div class="mission text-center px-2 my-5 d-block">
+    <h2 class="mission--title">
       My mission is
     </h2>
     <blockquote :cite="name">
@@ -30,3 +30,12 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.mission {
+  .mission--title {
+    color: #4094d0;
+    font-weight: 500;
+  }
+}
+</style>
