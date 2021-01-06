@@ -40,7 +40,7 @@
         "webpack-env": "^0.8.0"
     },
     "dependencies": {
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "@fortawesome/fontawesome-svg-core": "^1.2.28",
         "@fortawesome/free-brands-svg-icons": "^5.13.0",
         "@fortawesome/free-solid-svg-icons": "^5.13.0",
